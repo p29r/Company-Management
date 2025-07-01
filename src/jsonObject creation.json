@@ -1,0 +1,33 @@
+curl -X 'POST' \
+  'https://freeapi.miniprojectideas.com/api/ClientStrive/CreateNewEmployee' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json-patch+json' \
+  -d '{
+  "roleId": 13,
+  "userName": "priya",
+  "empCode": "string",
+  "empId": 0,
+  "empName": "string",
+  "empEmailId": "priyanka",
+  "empDesignationId": 35,
+  "empContactNo": "string",
+  "empAltContactNo": "string",
+  "empPersonalEmailId": "string",
+  "empExpTotalYear": 0,
+  "empExpTotalMonth": 0,
+  "empCity": "string",
+  "empState": "string",
+  "empPinCode": "string",
+  "empAddress": "string",
+  "empPerCity": "string",
+  "empPerState": "string",
+  "empPerPinCode": "string",
+  "empPerAddress": "string",
+  "password": "2022",
+  "ErpEmployeeSkills": [
+    
+  ],
+  "ErmEmpExperiences": [
+    
+  ]
+}'
