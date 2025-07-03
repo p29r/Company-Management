@@ -6,7 +6,9 @@ export const Constant = {
         },
         EMPLOYEE: {
             GET_ALL_EMPLOYEE: 'GetAllEmployee',
-            CREATE_EMPLOYEE: 'CreateNewEmployee'
+            CREATE_EMPLOYEE: 'CreateNewEmployee',
+            GET_EMPLOYEE_BY_ID: 'GetEmployeeByEmployeeId?id=',
+            UPDATE_EMPLOYEE_BY_ID: 'UpdateEmployee'
         },
         MASTER: {
             GET_ALL_ROLES: 'GetAllRoles',

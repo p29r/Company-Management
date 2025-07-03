@@ -48,16 +48,17 @@
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="row">
+                
                 <!-- Employee 1 -->
                 @for (item of employeeList; track $index) {
                 <div class="col-lg-4 col-md-6">
                     <div class="card employee-card">
                         <div class="card-body">
                             <div class="employee-avatar">
-                                AB
+                                {{item.empName | shortName}}
                             </div>
                             <h5 class="employee-name">{{item.empName}}</h5>
-                            <p class="employee-designation">{{item.empDesignation}}r</p>
+                            <p class="employee-designation">{{item.empDesignation}}</p>
 
                             <div class="employee-details">
                                 <div class="detail-row">
@@ -66,7 +67,7 @@
                                     </div>
                                     <div class="detail-content">
                                         <div class="detail-label">Employee ID</div>
-                                        <div class="detail-value">{{item.empEmailId}}</div>
+                                        <div class="detail-value">{{item.empId}}</div>
                                     </div>
                                 </div>
 
@@ -76,7 +77,7 @@
                                     </div>
                                     <div class="detail-content">
                                         <div class="detail-label">Employee Code</div>
-                                        <div class="detail-value">{{item.empId}}</div>
+                                        <div class="detail-value">{{item.empCode}}</div>
                                     </div>
                                 </div>
 
@@ -86,7 +87,7 @@
                                     </div>
                                     <div class="detail-content">
                                         <div class="detail-label">Email</div>
-                                        <div class="detail-value">abc-company.com</div>
+                                        <div class="detail-value">{{item.empEmailId}}</div>
                                     </div>
                                 </div>
 
@@ -100,7 +101,7 @@
                                     </div>
                                 </div>
 
-                                <div class="detail-row">
+                                <!-- <div class="detail-row">
                                     <div class="detail-icon">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                     </div>
@@ -108,11 +109,11 @@
                                         <div class="detail-label">Mobile</div>
                                         <div class="detail-value">{{item.mobile}}</div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="action-buttons">
-                                <a href="#" class="btn-action btn-edit">
+                                <a class="btn-action btn-edit" [routerLink]="'/employee-form/' + item.empId">
                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                     Edit
                                 </a>

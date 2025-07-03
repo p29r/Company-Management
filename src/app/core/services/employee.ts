@@ -23,4 +23,19 @@ export class EmployeeService {
     //debugger
     return this.http.post<ApiResponse>(environment.API_URL + Constant.API_METHODS.EMPLOYEE.CREATE_EMPLOYEE, empObj);
   }
+  getEmplyeeById(empId: number): Observable<ApiResponse> {
+    //debugger
+    //return this.http.get<ApiResponse>(environment.API_URL + Constant.API_METHODS.EMPLOYEE.GET_EMPLOYEE_BY_ID + empId);
+    //template literal
+    return this.http.get<ApiResponse>(`${environment.API_URL}${Constant.API_METHODS.EMPLOYEE.GET_EMPLOYEE_BY_ID}${empId} `);
+
+  }
+
+    updateEmplyeeById(empObj: EmployeeModel): Observable<ApiResponse> {
+    //debugger
+    //return this.http.get<ApiResponse>(environment.API_URL + Constant.API_METHODS.EMPLOYEE.GET_EMPLOYEE_BY_ID + empId);
+    //template literal
+    return this.http.put<ApiResponse>(`${environment.API_URL}${Constant.API_METHODS.EMPLOYEE.UPDATE_EMPLOYEE_BY_ID} `,empObj);
+
+  }
 }

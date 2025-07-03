@@ -20,10 +20,10 @@ export class Login {
     this.userService.onLogin(this.loginFormObj).subscribe({
       next: (response: any) => {
         //debugger;
-        // const data = response.data.data;
-        // const strData = JSON.stringify(data);
+        const data = response.data.data;
+        const strData = JSON.stringify(data);
 
-        // localStorage.setItem('clientStriveUser', strData);
+        localStorage.setItem('clientStriveUser', strData);
         this.router.navigateByUrl('/employee-list');
       },
       error: (error: any) => { //debugger
