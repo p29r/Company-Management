@@ -6,12 +6,12 @@ import { Constant } from '../constants/constant';
 @Injectable({
   providedIn: 'root'
 })
-export class User {
+export class Client {
 
   constructor(private http: HttpClient) { }
 
-  onLogin(obj: any) {
+  getAllClientList() {
     //debugger
-    return this.http.post(environment.API_URL + Constant.API_METHODS.LOGIN, obj)
+    return this.http.get(environment.API_URL + Constant.API_METHODS.CLENT.GET_ALL_CLIENTS)
   }
 }

@@ -16,17 +16,18 @@ export class Login {
   userService = inject(User); // after 16 version
   router = inject(Router);
   signIn() {
-    debugger;
+    //debugger;
     this.userService.onLogin(this.loginFormObj).subscribe({
       next: (response: any) => {
-        debugger;
-        const data = response.data.data;
-        const strData = JSON.stringify(data);
+        //debugger;
+        // const data = response.data.data;
+        // const strData = JSON.stringify(data);
 
-        localStorage.setItem('clientStriveUser', strData);
-        this.router.navigateByUrl('/client-list');
+        // localStorage.setItem('clientStriveUser', strData);
+        this.router.navigateByUrl('/employee-list');
       },
-      error: (error: any) => { debugger }
+      error: (error: any) => { //debugger
+         }
     })
   }
 }

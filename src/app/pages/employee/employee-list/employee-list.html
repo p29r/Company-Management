@@ -1,1 +1,131 @@
-<p>employee-list works!</p>
+<div class="container-fluid">
+    <!-- Page Header -->
+    <!-- <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="page-header">
+                <h1><i class="fa fa-users" aria-hidden="true"></i> Employee Management</h1>
+                <p>Manage your team members and their information</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Statistics Bar -->
+     <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="stats-bar">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="stats-item">
+                            <div class="stats-number">6</div>
+                            <div class="stats-label">Total Employees</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-item">
+                            <div class="stats-number">4</div>
+                            <div class="stats-label">Developers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-item">
+                            <div class="stats-number">2</div>
+                            <div class="stats-label">Designers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-item">
+                            <!-- <div class="stats-number">3</div>
+                            <div class="stats-label">Departments</div> -->
+                            <button class="btn btn-outline-success m10" routerLink="/employee-form">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Employee Cards -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="row">
+                <!-- Employee 1 -->
+                @for (item of employeeList; track $index) {
+                <div class="col-lg-4 col-md-6">
+                    <div class="card employee-card">
+                        <div class="card-body">
+                            <div class="employee-avatar">
+                                AB
+                            </div>
+                            <h5 class="employee-name">{{item.empName}}</h5>
+                            <p class="employee-designation">{{item.empDesignation}}r</p>
+
+                            <div class="employee-details">
+                                <div class="detail-row">
+                                    <div class="detail-icon">
+                                        <i class="fa fa-id-badge" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <div class="detail-label">Employee ID</div>
+                                        <div class="detail-value">{{item.empEmailId}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-row">
+                                    <div class="detail-icon">
+                                        <i class="fa fa-code" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <div class="detail-label">Employee Code</div>
+                                        <div class="detail-value">{{item.empId}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-row">
+                                    <div class="detail-icon">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <div class="detail-label">Email</div>
+                                        <div class="detail-value">abc-company.com</div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-row">
+                                    <div class="detail-icon">
+                                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <div class="detail-label">Role</div>
+                                        <div class="detail-value">{{item.role}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-row">
+                                    <div class="detail-icon">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <div class="detail-label">Mobile</div>
+                                        <div class="detail-value">{{item.mobile}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <a href="#" class="btn-action btn-edit">
+                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                    Edit
+                                </a>
+                                <a href="#" class="btn-action btn-delete">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    Delete
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

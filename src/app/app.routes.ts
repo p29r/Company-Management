@@ -5,6 +5,7 @@ import { ClientForm } from './pages/client/client-form/client-form';
 import { ClientList } from './pages/client/client-list/client-list';
 import { EmployeeForm } from './pages/employee/employee-form/employee-form';
 import { EmployeeList } from './pages/employee/employee-list/employee-list';
+import { authGuard } from './core/guards/auth-guard';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {
         path:'',
         component:Layout,
+        //canActivate:[authGuard],
         children:[
             {
                 path:'client-form',
